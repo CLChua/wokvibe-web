@@ -1,70 +1,65 @@
-# Wokvibe 官网（静态站点）
+# Wokvibe
 
-Wokvibe iOS 应用的产品介绍网站，包含产品首页、隐私政策和服务政策（条款）。纯静态实现，无后端、无构建步骤，任何静态托管（GitHub Pages、Vercel、Netlify、Nginx、OSS/CDN）可直接部署。
+**Plan it. Cook it. Feel good.** —— 安排好。做出来。吃出好心情。
 
-## 线上地址
+Wokvibe 是一款为 iPhone 设计的饮食规划 App，把食谱、今日餐食、食材库存和营养目标串成一条鲜活的日常闭环——从「今晚吃什么」，到安心吃下最后一口。
 
-- 仓库：<https://github.com/CLChua/wokvibe-web>
-- 站点（GitHub Pages，main 分支根目录自动部署）：<https://clchua.github.io/wokvibe-web/>
+- iPhone · iOS 18+ · 免费开始
+- 下载：App Store（上架后补充链接）
 
-推送代码到 `main` 分支后，Pages 会自动重新构建发布，无需其他操作。
+## 四大入口，一条日常线
 
-## 本地预览
+今日、食谱、库存、健康首尾相连：决定吃什么、买齐它、做出来、吃明白。
 
-```sh
-python3 -m http.server 8747
-# 打开 http://localhost:8747/
-```
+- **今日**：今日餐食时间线、采购阻塞提醒、营养状态与快捷动作——一天的开饭中枢。
+- **食谱**：搜索、筛选、收藏、编辑你的食谱库，还能用三种方式把新菜带进来。
+- **库存**：管理批次与临期日期，发现缺口，一键变成采购清单。
+- **健康**：为热量、蛋白质、脂肪、碳水与水分设定目标，记录真实摄入，获得贴合实际的温和建议；可在你授权后读取 Apple 健康 数据。
 
-（直接双击 index.html 用 file:// 打开也可以正常运行。）
+## 食谱导入，三种方式
 
-## 目录结构
+新菜进来，不费工夫——其中两种完全在 iPhone 本机离线完成，第三种只在你的明确同意后运行。
 
-```
-index.html        产品介绍（双语）
-privacy.html      隐私政策（双语）
-terms.html        服务政策/条款（双语）
-assets/
-  css/main.css    设计令牌 + 全部样式
-  js/i18n.js      中英切换（localStorage 记忆 + 浏览器语言自动检测）
-  js/main.js      GSAP 动效（首页；含 prefers-reduced-motion 与无帧环境兜底）
-  js/doc.js       政策页目录高亮
-  vendor/gsap/    gsap.min.js + ScrollTrigger.min.js（自托管 3.13.0，免费商用）
-  img/            品牌与食物图片（自 Wokvibe App 资产目录只读复制并压缩）
-  fonts/          Archivo Black（SIL OFL 许可，用于展示型标题）
-```
+1. **链接导入**：粘贴公开食谱网页链接，在 iPhone 本机解析结构化数据，生成可编辑的食谱草稿。
+2. **拍照识别**：拍下食谱卡片或菜谱书内页，设备端 OCR 识别文字，全程无需网络。
+3. **AI 智能导入（可选）**：把照片或网页交给 AI，得到结构化草稿。原图不留存，云端草稿 24 小时后自动删除——且只在你的明确同意后运行。
 
-## 双语机制
+## 烹饪模式
 
-页面内同时包含两份文案（`.lang-en` / `.lang-zh`），由 `<html data-lang>` 驱动 CSS 显隐：
+跟得上你手速的厨房副驾：
 
-- 首次访问按浏览器语言自动选择（`zh*` → 中文，其余 → 英文）；
-- 手动切换写入 `localStorage("wokvibe-lang")`，跨页面、跨会话保持；
-- `<html lang>`、`<title>`、`meta description` 随语言同步更新；
-- 无 JS 时优雅降级为英文。
+- **分步引导**：一步一步来，进度一眼可见；做完一道菜自动回写今日计划。
+- **厨房大屏**：手上有面粉？放大屏幕，隔着料理台也看得清。
+- **计时器与语音**：多路计时加语音控制，双手离不开锅也照样从容。
 
-## 动效
+## 智能识别，一键入库
 
-遵循 Wokvibe 品牌动效语言（GAZE FIRST / SOFT BOUNCE / ONE BEAT AHEAD）：
+拍一下，进库存，照着做。智能识别把一张采购小票或一冰箱食材变成库存批次；临期食材会在今日计划中优先浮现，缺的则自动变成采购项——不用再手打清单。
 
-- 首页标题行级遮罩入场、吉祥物软弹浮动、装饰形状视差；
-- 品牌词与食物画廊双跑马灯（离开视口自动暂停）；
-- 滚动批量 reveal、健康环形图绘制、进度条生长；
-- 完整支持 `prefers-reduced-motion`；若浏览器处于无法绘制帧的状态（后台标签页等），有兜底逻辑直接展示全部内容，保证内容永不依赖动画完成。
+## 隐私，默认如此
 
-## 上线前必须替换的占位符
+- **本地优先**：食谱、计划与库存都住在你的 iPhone 上，iCloud 同步是可选项。
+- **无广告、无追踪**：应用内没有第三方统计或广告 SDK。
+- **随时可删除**：随时在应用内删除云端账户；卸载即清除本地数据。
 
-代码中已用 `TODO` / `PLACEHOLDER` 注释标出：
+## 价格
 
-1. **App Store 链接**：`index.html` 中所有 `href="#"` 的下载按钮（搜索 `TODO: replace`）。
-2. **运营主体**：`privacy.html` / `terms.html` 中的 "Wokvibe Team (placeholder)"。
-3. **联系邮箱**：`privacy@wokvibe.app`、`support@wokvibe.app`、`legal@wokvibe.app`。
-4. **生效日期**：两份政策中的 "2026 年 9 月 17 日 / September 17, 2026"。
-5. **管辖法律**：`terms.html` 第 16 节为占位表述，上线前请律师确认。
-6. **事实核对**：价格（$2.99 / 30 次）、3 次免费试用、积分不过期等描述需与最终上架版本一致。
+该免费的都免费——日常所需的核心能力全部免费，只有想用 AI 导入时才需要一次性付费。
 
-## 素材与许可
+- **免费（$0）**
+  - 食谱库，含链接导入与本机拍照识别
+  - 今日餐食计划与采购清单
+  - 库存批次、临期提醒与缺口
+  - 营养目标、摄入记录与完整烹饪模式
+- **AI 导入包（$2.99，一次性内购）**
+  - 30 次 AI 智能导入（照片或网页 → 草稿）
+  - 积分永久有效，不会过期
+  - 新用户含 3 次免费试用，无需绑卡
+  - 通过 Apple 内购完成购买；无订阅、无自动续费，价格以你所在地区的 App Store 为准
 
-- GSAP：`assets/vendor/gsap/`，遵循 GreenSock 标准许可（自 Webflow 收购后全部插件免费商用）。
-- Archivo Black 字体：Google Fonts / Fontsource，SIL Open Font License。
-- 图片：复制自 Wokvibe App 的 `Assets.xcassets`（仅复制，未改动 App 项目）。
+## 相关链接
+
+- 官网：<https://clchua.github.io/wokvibe-web/>
+- 隐私政策：<https://clchua.github.io/wokvibe-web/privacy.html>
+- 服务条款：<https://clchua.github.io/wokvibe-web/terms.html>
+- 支持与反馈：support@wokvibe.app
