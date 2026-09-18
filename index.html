@@ -14,7 +14,7 @@
   <meta property="og:description" content="Recipes, today's meals, pantry and nutrition — one vibrant daily loop on iPhone.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/mascot.jpg">
-  <link rel="stylesheet" href="assets/css/main.css?v=4">
+  <link rel="stylesheet" href="assets/css/main.css?v=5">
   <script>
     /* set active language before first paint to avoid a bilingual flash */
     (function () {
@@ -253,8 +253,29 @@
             </p>
           </div>
           <div class="banner-art" aria-hidden="true">
-            <i class="art-halo"></i>
-            <img class="art-capture" src="assets/img/smart-capture.png" alt="" width="600" height="600" loading="lazy">
+            <div class="mock mock-inventory">
+              <div class="inv-head">
+                <span class="inv-scan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M3 12h18"/></svg>
+                </span>
+                <span class="inv-lines"><i class="inv-line"></i><i class="inv-line short"></i></span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-thumb" style="background: var(--lime-soft);"></span>
+                <span class="inv-lines"><i class="inv-line"></i><i class="inv-line short"></i></span>
+                <span class="inv-chip fresh"><span class="lang-en">Fresh</span><span class="lang-zh">新鲜</span></span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-thumb" style="background: #ffe4e1;"></span>
+                <span class="inv-lines"><i class="inv-line"></i><i class="inv-line short"></i></span>
+                <span class="inv-chip expiring"><span class="lang-en">Expiring</span><span class="lang-zh">临期</span></span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-thumb" style="background: #e3ecff;"></span>
+                <span class="inv-lines"><i class="inv-line"></i><i class="inv-line short"></i></span>
+                <span class="inv-chip buy"><span class="lang-en">Buy</span><span class="lang-zh">待购</span></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
