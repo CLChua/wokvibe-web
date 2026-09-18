@@ -2,6 +2,13 @@
 
 Wokvibe iOS 应用的产品介绍网站，包含产品首页、隐私政策和服务政策（条款）。纯静态实现，无后端、无构建步骤，任何静态托管（GitHub Pages、Vercel、Netlify、Nginx、OSS/CDN）可直接部署。
 
+## 线上地址
+
+- 仓库：<https://github.com/CLChua/wokvibe-web>
+- 站点（GitHub Pages，main 分支根目录自动部署）：<https://clchua.github.io/wokvibe-web/>
+
+推送代码到 `main` 分支后，Pages 会自动重新构建发布，无需其他操作。
+
 ## 本地预览
 
 ```sh
