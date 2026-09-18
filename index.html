@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en"
+  data-title-en="Wokvibe — Plan it. Cook it. Feel good."
+  data-title-zh="Wokvibe — 安排好，做出来，吃出好心情。"
+  data-desc-en="Wokvibe is an iPhone app that brings recipes, meal planning, pantry and nutrition into one vibrant daily loop. Free to start, iOS 18+."
+  data-desc-zh="Wokvibe 把食谱、餐食计划、库存采购与营养记录串成一条鲜活的日常闭环。iPhone 应用，免费开始，iOS 18+。">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wokvibe — Plan it. Cook it. Feel good.</title>
+  <meta name="description" content="Wokvibe is an iPhone app that brings recipes, meal planning, pantry and nutrition into one vibrant daily loop. Free to start, iOS 18+.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta property="og:title" content="Wokvibe — Plan it. Cook it. Feel good.">
+  <meta property="og:description" content="Recipes, today's meals, pantry and nutrition — one vibrant daily loop on iPhone.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/mascot.jpg">
+  <link rel="stylesheet" href="assets/css/main.css?v=4">
+  <script>
+    /* set active language before first paint to avoid a bilingual flash */
+    (function () {
+      var l = null;
+      try { l = localStorage.getItem("wokvibe-lang"); } catch (e) {}
+      if (l !== "en" && l !== "zh") {
+        l = ((navigator.languages && navigator.languages[0]) || navigator.language || "")
+          .toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+      }
+      document.documentElement.setAttribute("data-lang", l);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span class="lang-en">Skip to content</span><span class="lang-zh">跳到正文</span></a>
+
+  <header class="site-header on-dark">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Wokvibe home">
+        <span class="brand-badge"><img src="assets/img/favicon.png" alt="Wokvibe mascot" width="40" height="40"></span>
+        <span>WOKVIBE</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#features"><span class="lang-en">Features</span><span class="lang-zh">功能</span></a>
+        <a href="#import"><span class="lang-en">Import</span><span class="lang-zh">导入</span></a>
+        <a href="#cooking"><span class="lang-en">Cooking</span><span class="lang-zh">烹饪</span></a>
+        <a href="#health"><span class="lang-en">Health</span><span class="lang-zh">健康</span></a>
+        <a href="privacy.html"><span class="lang-en">Privacy</span><span class="lang-zh">隐私</span></a>
+        <a href="terms.html"><span class="lang-en">Terms</span><span class="lang-zh">条款</span></a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language / 语言">
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </div>
+        <!-- TODO: replace href="#" with the real App Store URL before launch -->
+        <a class="btn btn-lime btn-sm" href="#download">
+          <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span class="lang-en">App Store</span><span class="lang-zh">App Store</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-eyebrow" data-hero-seq><span class="dot"></span>
+            <span class="lang-en">iPhone · iOS 18+ · Free to start</span>
+            <span class="lang-zh">iPhone · iOS 18+ · 免费开始</span>
+          </p>
+          <h1 class="hero-title">
+            <span class="hero-line"><span class="lang-en">Plan it.</span><span class="lang-zh">安排好。</span></span>
+            <span class="hero-line"><span class="lang-en">Cook it.</span><span class="lang-zh">做出来。</span></span>
+            <span class="hero-line"><span class="lang-en"><span class="accent">Feel good.</span></span><span class="lang-zh"><span class="accent">吃出好心情。</span></span></span>
+          </h1>
+          <p class="hero-sub" data-hero-seq>
+            <span class="lang-en">Wokvibe pulls recipes, today's meals, your pantry and your nutrition goals into one vibrant daily loop — from "what's for dinner?" to the very last bite.</span>
+            <span class="lang-zh">Wokvibe 把食谱、今日餐食、库存采购和营养目标串成一条鲜活的日常闭环——从「今晚吃什么」，到安心吃下最后一口。</span>
+          </p>
+          <div class="hero-cta" data-hero-seq>
+            <!-- TODO: replace href="#" with the real App Store URL before launch -->
+            <a class="btn btn-lime" href="#download">
+              <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="lang-en">Download on the App Store</span><span class="lang-zh">App Store 下载</span>
+            </a>
+            <a class="btn btn-ghost" href="#features">
+              <span class="lang-en">See what it does</span><span class="lang-zh">看看它能做什么</span>
+            </a>
+          </div>
+          <p class="hero-note" data-hero-seq>
+            <span class="lang-en">Free core features · Optional one-time AI Import Pack · No subscription</span>
+            <span class="lang-zh">核心功能免费 · AI 导入包为可选一次性内购 · 无订阅</span>
+          </p>
+        </div>
+
+        <div class="hero-stage" aria-hidden="true">
+          <div class="mascot-card" data-parallax="-8">
+            <img src="assets/img/mascot.jpg" alt="" width="800" height="800">
+          </div>
+          <svg class="shape shape-star" width="72" height="72" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 8.2L24 12l-9.4 3.8L12 24l-2.6-8.2L0 12l9.4-3.8z"/></svg>
+          <div class="shape shape-ring"></div>
+          <div class="shape shape-capsule"></div>
+          <div class="shape shape-coral"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BRAND DNA MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <span>PLAY</span><i class="sep"></i><span>CARE</span><i class="sep"></i><span>RHYTHM</span><i class="sep"></i><span>FRESH</span><i class="sep"></i><span>FUTURE</span><i class="sep"></i><span>GOOD FOOD, GOOD MOOD</span><i class="sep"></i>
+        </div>
+        <div class="marquee-item">
+          <span>PLAY</span><i class="sep"></i><span>CARE</span><i class="sep"></i><span>RHYTHM</span><i class="sep"></i><span>FRESH</span><i class="sep"></i><span>FUTURE</span><i class="sep"></i><span>GOOD FOOD, GOOD MOOD</span><i class="sep"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= DNA ================= -->
+    <section class="section" id="dna">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="num">01</span><span class="lang-en">Why Wokvibe</span><span class="lang-zh">为什么是 Wokvibe</span></p>
+          <h2 class="section-title">
+            <span class="lang-en">Five words, one kitchen rhythm</span>
+            <span class="lang-zh">五个词，一套厨房节奏</span>
+          </h2>
+          <p class="section-lead">
+            <span class="lang-en">The brand DNA behind the app — and behind every meal you plan with it.</span>
+            <span class="lang-zh">这是 Wokvibe 的品牌基因，也是你用它安排的每一顿饭。</span>
+          </p>
+        </div>
+
+        <div class="dna-grid" data-reveal>
+          <div class="dna-tile">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+            <div>
+              <div class="word"><span class="lang-en">PLAY</span><span class="lang-zh">玩心<small>PLAY</small></span></div>
+              <p><span class="lang-en">Meals should be fun. Planning stays light, colorful and a little playful.</span><span class="lang-zh">每一餐都该有点好玩的仪式感——计划保持轻盈、有趣、有色彩。</span></p>
+            </div>
+          </div>
+          <div class="dna-tile">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            <div>
+              <div class="word"><span class="lang-en">CARE</span><span class="lang-zh">用心<small>CARE</small></span></div>
+              <p><span class="lang-en">From one ingredient to one nutrient — what you eat is taken seriously.</span><span class="lang-zh">从一种食材到一项营养素，你吃进去的都被认真对待。</span></p>
+            </div>
+          </div>
+          <div class="dna-tile">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 18c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg>
+            <div>
+              <div class="word"><span class="lang-en">RHYTHM</span><span class="lang-zh">节奏<small>RHYTHM</small></span></div>
+              <p><span class="lang-en">Three meals a day, naturally in order — today, this week, this month.</span><span class="lang-zh">一日三餐，自然成序——今天、这一周、这个月。</span></p>
+            </div>
+          </div>
+          <div class="dna-tile">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4c-9 0-15 5-15 13 0 1.5.3 2.7.7 3.7"/><path d="M20 4c0 9-5 15-13 15"/><path d="M6 18c2-5 6-9 11-11"/></svg>
+            <div>
+              <div class="word"><span class="lang-en">FRESH</span><span class="lang-zh">新鲜<small>FRESH</small></span></div>
+              <p><span class="lang-en">Eat what you have first. Expiring items get flagged before they go bad.</span><span class="lang-zh">先吃库存里的，临期的提前提醒，不让食材白白过期。</span></p>
+            </div>
+          </div>
+          <div class="dna-tile">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.2 6.4L21 10l-6.8 1.6L12 18l-2.2-6.4L3 10l6.8-1.6z"/><path d="M19 17l.9 2.1L22 20l-2.1.9L19 23l-.9-2.1L16 20l2.1-.9z"/></svg>
+            <div>
+              <div class="word"><span class="lang-en">FUTURE</span><span class="lang-zh">向前<small>FUTURE</small></span></div>
+              <p><span class="lang-en">Local-first by design and privacy-friendly — and still growing.</span><span class="lang-zh">本地优先、隐私友好，还在持续生长。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="num">02</span><span class="lang-en">Features</span><span class="lang-zh">功能</span></p>
+          <h2 class="section-title">
+            <span class="lang-en">Four entries, one daily line</span>
+            <span class="lang-zh">四大入口，一条日常线</span>
+          </h2>
+          <p class="section-lead">
+            <span class="lang-en">Today, Recipes, Pantry and Health connect into a single loop: decide what to eat, shop for it, cook it, and learn from it.</span>
+            <span class="lang-zh">今日、食谱、库存、健康首尾相连：决定吃什么、买齐它、做出来、吃明白。</span>
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card" data-reveal>
+            <div class="icon-tile" style="background: var(--lime-soft); color: var(--ink);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="12" cy="16" r="2.6"/><path d="M12 14.6V16l1.3.8"/></svg>
+            </div>
+            <h3><span class="en-name">Today</span>
+              <span class="lang-en">Today</span><span class="lang-zh">今日</span>
+            </h3>
+            <p>
+              <span class="lang-en">Today's meals on a timeline, shopping blockers, nutrition status and quick actions — one hub that runs the day.</span>
+              <span class="lang-zh">今日餐食时间线、采购阻塞提醒、营养状态与快捷动作——一天的开饭中枢。</span>
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="icon-tile" style="background: #ffe4e1; color: #b3301f;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 7h7M9 11h5"/></svg>
+            </div>
+            <h3><span class="en-name">Recipes</span>
+              <span class="lang-en">Recipes</span><span class="lang-zh">食谱</span>
+            </h3>
+            <p>
+              <span class="lang-en">Search, filter, favorite and edit your library — and bring new recipes in, three different ways.</span>
+              <span class="lang-zh">搜索、筛选、收藏、编辑你的食谱库，还能用三种方式把新菜带进来。</span>
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="icon-tile" style="background: #e3ecff; color: #1c3fae;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9l1.7-4.5A2 2 0 0 1 8.6 3h6.8a2 2 0 0 1 1.9 1.5L19 9"/><path d="M3 9h18l-1.6 9.5A2 2 0 0 1 17.4 20H6.6a2 2 0 0 1-2-1.5z"/><path d="M9 13v3M15 13v3"/></svg>
+            </div>
+            <h3><span class="en-name">Pantry</span>
+              <span class="lang-en">Pantry</span><span class="lang-zh">库存</span>
+            </h3>
+            <p>
+              <span class="lang-en">Track batches and expiry dates, spot what's missing, and turn gaps into shopping items.</span>
+              <span class="lang-zh">管理批次与临期，发现缺口，一键变成采购清单。</span>
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="icon-tile" style="background: #e6f9ee; color: #0e8a48;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/><path d="M3.5 12h4l1.5-3 2.5 6 1.8-3.9.7.9h5.5"/></svg>
+            </div>
+            <h3><span class="en-name">Health</span>
+              <span class="lang-en">Health</span><span class="lang-zh">健康</span>
+            </h3>
+            <p>
+              <span class="lang-en">Set nutrition goals, log what you actually eat, and get grounded, gentle suggestions.</span>
+              <span class="lang-zh">设定营养目标，记录真实摄入，获得贴合实际的温和建议。</span>
+            </p>
+          </article>
+        </div>
+
+        <div class="banner" data-reveal>
+          <div>
+            <h3>
+              <span class="lang-en">Snap it. Stock it. Cook it.</span>
+              <span class="lang-zh">拍一下，进库存，照着做。</span>
+            </h3>
+            <p>
+              <span class="lang-en">Smart capture turns a grocery receipt or a full fridge into inventory batches. Expiring items then surface first in today's plan, and missing ones become shopping items — no typing marathons.</span>
+              <span class="lang-zh">智能识别把一张采购小票或一冰箱食材变成库存批次；临期食材会在今日计划中优先浮现，缺的则自动变成采购项——不用再手打清单。</span>
+            </p>
+          </div>
+          <div class="banner-art" aria-hidden="true">
+            <i class="art-halo"></i>
+            <img class="art-capture" src="assets/img/smart-capture.png" alt="" width="600" height="600" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IMPORT ================= -->
+    <section class="section" id="import">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="num">03</span><span class="lang-en">Get recipes in</span><span class="lang-zh">食谱进来</span></p>
+          <h2 class="section-title">
+            <span class="lang-en">New recipes, zero busywork</span>
+            <span class="lang-zh">新菜进来，不费工夫</span>
+          </h2>
+          <p class="section-lead">
+            <span class="lang-en">Three ways to import — two of them work fully offline on your iPhone, and the third only runs with your explicit consent.</span>
+            <span class="lang-zh">三种导入方式——两种完全在 iPhone 本机离线完成，第三种只在你的明确同意后运行。</span>
+          </p>
+        </div>
+
+        <div class="import-grid">
+          <article class="import-card" data-reveal>
+            <div class="import-media">
+              <div class="mock mock-link" aria-hidden="true">
+                <div class="bar"><i></i><i></i><i></i></div>
+                <div class="field">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+                  https://recipes.example.com/…
+                </div>
+              </div>
+            </div>
+            <div class="import-body">
+              <span class="tag offline">
+                <span class="lang-en">On-device</span><span class="lang-zh">本机离线</span>
+              </span>
+              <h3>
+                <span class="lang-en">Paste a link</span><span class="lang-zh">链接导入</span>
+              </h3>
+              <p>
+                <span class="lang-en">Paste a public recipe URL and Wokvibe parses the structured recipe data right on your iPhone into an editable draft.</span>
+                <span class="lang-zh">粘贴公开食谱网页链接，Wokvibe 在 iPhone 本机解析结构化数据，生成可编辑的食谱草稿。</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="import-card" data-reveal>
+            <div class="import-media">
+              <div class="mock mock-camera" aria-hidden="true">
+                <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+                <span class="shutter">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="import-body">
+              <span class="tag offline">
+                <span class="lang-en">On-device</span><span class="lang-zh">本机离线</span>
+              </span>
+              <h3>
+                <span class="lang-en">Snap a photo</span><span class="lang-zh">拍照识别</span>
+              </h3>
+              <p>
+                <span class="lang-en">Photograph a recipe card or a cookbook spread — on-device OCR reads the text. No network needed.</span>
+                <span class="lang-zh">拍下食谱卡片或菜谱书内页，设备端 OCR 识别文字，全程无需网络。</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="import-card" data-reveal>
+            <div class="import-media">
+              <img src="assets/img/smart-import-sign-in.jpg" alt="" width="800" height="800" loading="lazy">
+            </div>
+            <div class="import-body">
+              <span class="tag cloud">
+                <span class="lang-en">AI · Optional</span><span class="lang-zh">AI · 可选</span>
+              </span>
+              <h3>
+                <span class="lang-en">Smart Import</span><span class="lang-zh">AI 智能导入</span>
+              </h3>
+              <p>
+                <span class="lang-en">Send a photo or a webpage to AI and get a structured draft back. Originals are never stored, cloud drafts auto-delete after 24 hours — and it only runs with your explicit consent.</span>
+                <span class="lang-zh">把照片或网页交给 AI，得到结构化草稿。原图不留存，云端草稿 24 小时后自动删除——且只在你的明确同意后运行。</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COOKING ================= -->
+    <section class="section cooking" id="cooking">
+      <div class="container cooking-grid">
+        <div>
+          <p class="eyebrow" data-reveal><span class="num">04</span><span class="lang-en">Cooking mode</span><span class="lang-zh">烹饪模式</span></p>
+          <h2 class="section-title" data-reveal>
+            <span class="lang-en">A kitchen copilot that keeps up</span>
+            <span class="lang-zh">跟得上你手速的厨房副驾</span>
+          </h2>
+          <p class="section-lead" data-reveal>
+            <span class="lang-en">Enter the full-screen cooking flow from today's plan or any recipe. Finish the dish and it writes back to your plan automatically.</span>
+            <span class="lang-zh">从今日计划或任意食谱进入全屏烹饪流程；做完一道菜，计划自动回写。</span>
+          </p>
+          <ul class="cooking-list">
+            <li data-reveal>
+              <span class="li-num">1</span>
+              <div><strong><span class="lang-en">Step by step</span><span class="lang-zh">分步引导</span></strong>
+                <span><span class="lang-en">One step at a time, with progress you can read at a glance.</span><span class="lang-zh">一步一步来，进度一眼可见。</span></span>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="li-num">2</span>
+              <div><strong><span class="lang-en">Kitchen view</span><span class="lang-zh">厨房大屏</span></strong>
+                <span><span class="lang-en">Hands covered in flour? Scale it up and read it across the counter.</span><span class="lang-zh">手上有面粉？放大屏幕，隔着料理台也看得清。</span></span>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="li-num">3</span>
+              <div><strong><span class="lang-en">Timers & voice</span><span class="lang-zh">计时器与语音</span></strong>
+                <span><span class="lang-en">Multiple timers plus voice control keep both hands on the wok.</span><span class="lang-zh">多路计时加语音控制，双手离不开锅也照样从容。</span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="timer-card" data-reveal aria-hidden="true">
+          <div class="timer-top">
+            <span class="chip"><span class="lang-en">Today · Dinner</span><span class="lang-zh">今日 · 晚餐</span></span>
+            <span class="step"><span class="lang-en">STEP 3/6</span><span class="lang-zh">第 3/6 步</span></span>
+          </div>
+          <div class="timer-digits">18:45</div>
+          <div class="timer-bar"><i data-bar="0.58"></i></div>
+          <div class="timer-foot">
+            <p class="hint"><span class="lang-en">Reducing the sauce — stir once in a while.</span><span class="lang-zh">收汁中——偶尔翻拌一下。</span></p>
+            <button class="pause-btn" type="button" tabindex="-1" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1.2"/><rect x="14" y="4" width="4" height="16" rx="1.2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOD GALLERY ================= -->
+    <section class="gallery" aria-hidden="true">
+      <div class="gallery-track">
+        <figure><img src="assets/img/meal-rosemary-roast-chicken.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-miso-salmon-vegetables.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-mapo-tofu.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-yangzhou-fried-rice.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-chicken-caesar-salad.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/ai-import-name.jpg" alt="" loading="lazy" width="800" height="800"></figure>
+        <figure><img src="assets/img/meal-beef-spaghetti.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-mushroom-chicken-congee.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-steamed-sea-bass.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-rosemary-roast-chicken.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-miso-salmon-vegetables.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-mapo-tofu.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-yangzhou-fried-rice.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-chicken-caesar-salad.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/ai-import-name.jpg" alt="" loading="lazy" width="800" height="800"></figure>
+        <figure><img src="assets/img/meal-beef-spaghetti.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-mushroom-chicken-congee.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+        <figure><img src="assets/img/meal-steamed-sea-bass.jpg" alt="" loading="lazy" width="640" height="640"></figure>
+      </div>
+    </section>
+
+    <!-- ================= HEALTH ================= -->
+    <section class="section" id="health">
+      <div class="container health-grid">
+        <div class="ring-card" data-reveal>
+          <div class="ring-wrap">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="86" fill="none" stroke="var(--cream-deep)" stroke-width="14"/>
+              <circle class="ring-arc" cx="100" cy="100" r="86" fill="none" stroke="var(--lime)" stroke-width="14" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+            </svg>
+            <div class="ring-center">
+              <span class="score">82</span>
+              <span class="score-label"><span class="lang-en">Balance score</span><span class="lang-zh">平衡分</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow" data-reveal><span class="num">05</span><span class="lang-en">Health</span><span class="lang-zh">健康</span></p>
+          <h2 class="section-title" data-reveal>
+            <span class="lang-en">Goals in, reality logged, advice that adds up</span>
+            <span class="lang-zh">目标定好，实际记上，建议才有依据</span>
+          </h2>
+          <p class="section-lead" data-reveal>
+            <span class="lang-en">Set targets for calories, protein, fat, carbs and hydration. Wokvibe compares them with your plan and your logs, then suggests gentle adjustments — and can read Apple Health data with your permission.</span>
+            <span class="lang-zh">为热量、蛋白质、脂肪、碳水与水分设定目标；Wokvibe 将其与计划和记录对照，给出温和的调整建议——并可在你授权后读取 Apple 健康 数据。</span>
+          </p>
+
+          <ul class="metric-list">
+            <li data-reveal>
+              <span class="m-name"><span class="lang-en">Calories</span><span class="lang-zh">热量</span></span>
+              <span class="m-bar"><i data-bar="0.8" style="background: var(--amber);"></i></span>
+              <span class="m-val">1680/2100</span>
+            </li>
+            <li data-reveal>
+              <span class="m-name"><span class="lang-en">Protein</span><span class="lang-zh">蛋白质</span></span>
+              <span class="m-bar"><i data-bar="0.84" style="background: var(--lime-deep);"></i></span>
+              <span class="m-val">92/110g</span>
+            </li>
+            <li data-reveal>
+              <span class="m-name"><span class="lang-en">Fat</span><span class="lang-zh">脂肪</span></span>
+              <span class="m-bar"><i data-bar="0.77" style="background: var(--coral);"></i></span>
+              <span class="m-val">54/70g</span>
+            </li>
+            <li data-reveal>
+              <span class="m-name"><span class="lang-en">Carbs</span><span class="lang-zh">碳水</span></span>
+              <span class="m-bar"><i data-bar="0.72" style="background: var(--blue);"></i></span>
+              <span class="m-val">186/260g</span>
+            </li>
+            <li data-reveal>
+              <span class="m-name"><span class="lang-en">Hydration</span><span class="lang-zh">水分</span></span>
+              <span class="m-bar"><i data-bar="0.7" style="background: var(--purple);"></i></span>
+              <span class="m-val">1.4/2.0L</span>
+            </li>
+          </ul>
+          <p class="health-note" data-reveal>
+            <span class="lang-en">Apple Health integration is optional and permission-based; numbers above are an illustrative example.</span>
+            <span class="lang-zh">Apple 健康 集成为可选且基于授权；以上数字为示意示例。</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST ================= -->
+    <div class="trust-strip">
+      <div class="container trust-inner">
+        <div class="trust-item" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div><strong><span class="lang-en">Local-first</span><span class="lang-zh">本地优先</span></strong>
+            <span><span class="lang-en">Recipes, plans and inventory live on your iPhone. iCloud sync is optional.</span><span class="lang-zh">食谱、计划与库存都在你的 iPhone 上，iCloud 同步是可选项。</span></span>
+          </div>
+        </div>
+        <div class="trust-item" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.9 17.9A10.4 10.4 0 0 1 12 20C5 20 2 12 2 12a17.6 17.6 0 0 1 4.1-5.1M9.9 4.2A9.8 9.8 0 0 1 12 4c7 0 10 8 10 8a17.8 17.8 0 0 1-2.2 3.2"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/><path d="M2 2l20 20"/></svg>
+          <div><strong><span class="lang-en">No ads, no trackers</span><span class="lang-zh">无广告、无追踪</span></strong>
+            <span><span class="lang-en">No third-party analytics or ad SDKs inside the app.</span><span class="lang-zh">应用内没有第三方统计或广告 SDK。</span></span>
+          </div>
+        </div>
+        <div class="trust-item" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+          <div><strong><span class="lang-en">Deletable, always</span><span class="lang-zh">随时可删除</span></strong>
+            <span><span class="lang-en">Delete your cloud account in-app anytime; uninstalling clears local data.</span><span class="lang-zh">随时在应用内删除云端账户；卸载即清除本地数据。</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= PRICING ================= -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="num">06</span><span class="lang-en">Pricing</span><span class="lang-zh">价格</span></p>
+          <h2 class="section-title">
+            <span class="lang-en">Free where it counts</span>
+            <span class="lang-zh">该免费的都免费</span>
+          </h2>
+          <p class="section-lead">
+            <span class="lang-en">Everything you need every day is free. Pay once — and only if you want AI imports.</span>
+            <span class="lang-zh">日常所需的核心能力全部免费；只有想用 AI 导入时，才需要一次性付费。</span>
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card" data-reveal>
+            <p class="plan"><span class="lang-en">Free</span><span class="lang-zh">免费</span></p>
+            <p class="price">$0</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">Recipe library with link import and on-device photo OCR</span><span class="lang-zh">食谱库，含链接导入与本机拍照识别</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">Today's meal plan and shopping list</span><span class="lang-zh">今日餐食计划与采购清单</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">Pantry batches, expiry alerts and gaps</span><span class="lang-zh">库存批次、临期提醒与缺口</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">Nutrition goals, logging and full cooking mode</span><span class="lang-zh">营养目标、摄入记录与完整烹饪模式</span></span></li>
+            </ul>
+            <!-- TODO: replace href="#" with the real App Store URL before launch -->
+            <a class="btn btn-ghost" href="#" style="justify-content:center;">
+              <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="lang-en">Download on the App Store</span><span class="lang-zh">App Store 下载</span>
+            </a>
+          </article>
+
+          <article class="price-card featured" data-reveal>
+            <p class="plan"><span class="lang-en">Smart Import Pack</span><span class="lang-zh">AI 导入包</span></p>
+            <p class="price">$2.99 <small><span class="lang-en">one-time</span><span class="lang-zh">一次性</span></small></p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">30 AI Smart Imports (photos or webpages → drafts)</span><span class="lang-zh">30 次 AI 智能导入（照片或网页 → 草稿）</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">Credits never expire</span><span class="lang-zh">积分永久有效，不会过期</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">3 free trial imports for new users — no card needed</span><span class="lang-zh">新用户含 3 次免费试用，无需绑卡</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><span class="lang-en">Purchased via Apple In-App Purchase</span><span class="lang-zh">通过 Apple 内购完成购买</span></span></li>
+            </ul>
+            <!-- TODO: replace href="#" with the real App Store URL before launch -->
+            <a class="btn btn-lime" href="#" style="justify-content:center;">
+              <span class="lang-en">Get it in the app</span><span class="lang-zh">在应用内获取</span>
+            </a>
+          </article>
+        </div>
+        <p class="price-note" data-reveal>
+          <span class="lang-en">Prices follow your local App Store. A one-time consumable purchase — no subscription, no auto-renewal.</span>
+          <span class="lang-zh">价格以你所在地区的 App Store 为准；为一次性消耗型内购，无订阅、无自动续费。</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="final-cta">
+      <div class="container">
+        <h2 data-reveal><span class="lang-en">Eat vibrant. Live vibrant.</span><span class="lang-zh">吃得鲜活，活得带劲。</span></h2>
+        <p data-reveal>
+          <span class="lang-en">Make tonight's dinner a planned one — Wokvibe is free to start.</span>
+          <span class="lang-zh">让今晚这顿饭有计划起来——Wokvibe 免费开始。</span>
+        </p>
+        <!-- TODO: replace href="#" with the real App Store URL before launch -->
+        <a class="btn btn-ink" href="#" data-reveal>
+          <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span class="lang-en">Download on the App Store</span><span class="lang-zh">App Store 下载</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Wokvibe home">
+            <span class="brand-badge"><img src="assets/img/favicon.png" alt="" width="40" height="40"></span>
+            <span>WOKVIBE</span>
+          </a>
+          <p><span class="lang-en">Good food, good mood. Wokvibe brings recipes, meal planning, pantry and nutrition into one vibrant loop — designed for iPhone.</span><span class="lang-zh">好饭菜，好心情。Wokvibe 把食谱、餐食计划、库存与营养串成一条鲜活闭环——为 iPhone 而设计。</span></p>
+        </div>
+        <div class="footer-col">
+          <h4><span class="lang-en">Product</span><span class="lang-zh">产品</span></h4>
+          <ul>
+            <li><a href="#features"><span class="lang-en">Features</span><span class="lang-zh">功能</span></a></li>
+            <li><a href="#import"><span class="lang-en">Import</span><span class="lang-zh">导入</span></a></li>
+            <li><a href="#cooking"><span class="lang-en">Cooking mode</span><span class="lang-zh">烹饪模式</span></a></li>
+            <li><a href="#health"><span class="lang-en">Health</span><span class="lang-zh">健康</span></a></li>
+            <li><a href="#download"><span class="lang-en">Download</span><span class="lang-zh">下载</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4><span class="lang-en">Legal</span><span class="lang-zh">法律</span></h4>
+          <ul>
+            <li><a href="privacy.html"><span class="lang-en">Privacy Policy</span><span class="lang-zh">隐私政策</span></a></li>
+            <li><a href="terms.html"><span class="lang-en">Terms of Service</span><span class="lang-zh">服务政策（条款）</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4><span class="lang-en">Support</span><span class="lang-zh">支持</span></h4>
+          <ul>
+            <li><a href="mailto:support@wokvibe.app">support@wokvibe.app</a></li>
+            <li>
+              <div class="lang-toggle" role="group" aria-label="Language / 语言">
+                <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+                <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Wokvibe Team. <span class="lang-en">All rights reserved.</span><span class="lang-zh">保留所有权利。</span></p>
+        <p><span class="lang-en">Apple, App Store and Apple Health are trademarks of Apple Inc.</span><span class="lang-zh">Apple、App Store 与 Apple 健康 是 Apple Inc. 的商标。</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap/gsap.min.js"></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="assets/js/i18n.js?v=2"></script>
+  <script src="assets/js/main.js?v=2"></script>
+</body>
+</html>
